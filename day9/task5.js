@@ -6,7 +6,7 @@ const handleTextChange = () => {
   });
 };
 
-const changeBorderColorOnHove = () => {
+const toggleBorderColor = () => {
   const paragraphEl = document.getElementById("paragraph");
   paragraphEl.addEventListener("mouseover", () => {
     paragraphEl.style.border = "2px solid red";
@@ -18,4 +18,4 @@ const changeBorderColorOnHove = () => {
 };
 
 handleTextChange();
-changeBorderColorOnHove();
+toggleBorderColor();
