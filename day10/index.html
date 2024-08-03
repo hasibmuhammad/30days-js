@@ -19,11 +19,46 @@
       <p>This is the text.</p>
     </div>
 
-    <form>
-      <input id="inputName" type="text" placeholder="Enter name..." />
+    <form id="form">
+      <input
+        id="inputName"
+        name="inputName"
+        type="text"
+        placeholder="Enter name..."
+      />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Enter email..."
+      />
+      <select name="country" id="country">
+        <option value="">--select</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Srilanka">Srilanka</option>
+      </select>
+      <button type="submit">Submit</button>
     </form>
+
+    <p>You selected: <span id="selectedCountry"></span></p>
+
+    <div id="formContainer">
+      <form>
+        <input type="text" name="" />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <ul id="list">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      <li>d</li>
+    </ul>
 
     <script src="activity1.js"></script>
     <script src="activity2.js"></script>
+    <script src="activity3.js"></script>
   </body>
 </html>
