@@ -1,30 +1,16 @@
-// .then.catch approach
-const fetchData = (url) => {
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
+const divideTwoNum = (a, b) => {
+  if (b === 0) throw new Error(`Can't divide by ${b}`);
+  return a / b;
 };
-// fetchData("https://jsonplaceholder.typicode.com/todos");
-
-// async await approach
-const fetchInfo = async (url) => {
-  const res = await fetch(url);
-  const data = await res.json();
-
-  console.log(data);
-};
-// fetchInfo("https://jsonplaceholder.typicode.com/posts");
-
-// try catch approach with async await;
-const getInfo = async (url) => {
+const divideTwoNumWithErrorHandling = () => {
   try {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    console.log(data);
+    const res = divideTwoNum(2, 0);
+    console.log(res);
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
+  } finally {
+    console.log("Execution completed!");
   }
 };
-getInfo("https://jsonplaceholder.typicode.com/posts");
+
+divideTwoNumWithErrorHandling();
